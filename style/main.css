@@ -319,17 +319,17 @@ hr {
     background: #ede0c8 url('https://dl.dropboxusercontent.com/u/51079467/2048/4.PNG');;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
   .tile.tile-8 .tile-inner {
-    color: #f9f6f2 url('https://dl.dropboxusercontent.com/u/51079467/2048/8.PNG');;
-    background: #f2b179; }
+    color: #f9f6f2;
+    background: #f2b179 url('https://dl.dropboxusercontent.com/u/51079467/2048/8.PNG'); }
   .tile.tile-16 .tile-inner {
-    color: #f9f6f2 url('https://dl.dropboxusercontent.com/u/51079467/2048/16.PNG');;
-    background: #f59563; }
+    color: #f9f6f2 ;
+    background: #f59563url('https://dl.dropboxusercontent.com/u/51079467/2048/16.PNG'); }
   .tile.tile-32 .tile-inner {
-    color: #f9f6f2 url('https://dl.dropboxusercontent.com/u/51079467/2048/32.PNG');;
-    background: #f67c5f; }
+    color: #f9f6f2 ;
+    background: #f67c5furl('https://dl.dropboxusercontent.com/u/51079467/2048/32.PNG'); }
   .tile.tile-64 .tile-inner {
-    color: #f9f6f2 url('https://dl.dropboxusercontent.com/u/51079467/2048/64.PNG');
-    background: #f65e3b; }
+    color: #f9f6f2 
+    background: #f65e3burl('https://dl.dropboxusercontent.com/u/51079467/2048/64.PNG'); }
   .tile.tile-128 .tile-inner {
     color: #f9f6f2;
     background: #edcf72;
