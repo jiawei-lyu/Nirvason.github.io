@@ -103,3 +103,16 @@ body {
   display: inline-block;
   border-radius: 50%;
 }
+
+#page-title { 
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: 2s;
+    animation: 2s;
+}
+
+@-webkit-keyframes fadeIn {
+   0%   { -webkit-transform: scale(2); opacity: 0; }
+   
+   100% { -webkit-transform: scale(1); opacity: 1; }
+}
