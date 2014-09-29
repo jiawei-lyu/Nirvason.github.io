@@ -5,6 +5,7 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
   padding-top: 50px;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 }
 
 
@@ -78,6 +79,7 @@ body {
   .main {
     padding-right: 40px;
     padding-left: 40px;
+    padding-bottom: 120px;
   }
 }
 .main .page-header {
@@ -90,7 +92,7 @@ body {
  */
 
 .placeholders {
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   text-align: center;
 }
 .placeholders h4 {
@@ -116,3 +118,27 @@ body {
    
    100% { -webkit-transform: scale(1); opacity: 1; }
 }*/
+
+.sensor-wrapper {
+  border-bottom: 1px solid #aaa;
+}
+
+.bottom-container {
+  display: flex;
+  position: fixed;
+  justify-content: space-around;
+  bottom: 0;
+  z-index: 10;
+  background: #fff;
+  margin-left: 25%;
+  width: 75%;
+  float: left;
+}
+
+.bottom-left {
+  width: 50%;  
+}
+
+.bottom-right {
+  width: 50%;  
+}
