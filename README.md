@@ -1,2 +1,2 @@
-# Demo
-A project template with Twitter Bootstrap and AngularJS
+# Playground
+Playing with all kinds of HTML5 / CSS3 / JS experiments
