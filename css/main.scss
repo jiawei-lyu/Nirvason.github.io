@@ -1,0 +1,25 @@
+$font-stack: 'Press Start 2P', cursive;
+$primary-color: #333;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin background-image($background) {
+  background-image: -webkit-linear-gradient(#64bd2e, #50a91a);
+  background-image: -moz-linear-gradient(#64bd2e, #50a91a);
+  background-image: -o-linear-gradient(#64bd2e, #50a91a);
+  background-image: -ms-linear-gradient(#64bd2e, #50a91a);
+  background-image: linear-gradient(#64bd2e, #50a91a);
+}
+
+body {
+  font-family: $font-stack;
+  color: $primary-color;
+}
+.test {
+
+}
