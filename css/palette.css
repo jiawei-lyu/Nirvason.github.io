@@ -1,0 +1,42 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.first {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 25vw;
+    background: rgb(192,168,1);
+}
+.second {
+    background: rgb(168,192,1);
+    position: absolute;
+    left: 25vw;
+    top: 0;
+    bottom: 0;
+    width: 25vw;
+}
+.third {
+    background: rgb(1,192,168);
+    position: absolute;
+    left: 50vw;
+    top: 0;
+    bottom: 0;
+    width: 25vw;
+}
+.fourth {
+    background: rgb(1,168,192);
+    position: absolute;
+    left: 75vw;
+    top: 0;
+    bottom: 0;
+    width: 25vw;
+}
