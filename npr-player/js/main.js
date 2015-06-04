@@ -1,6 +1,6 @@
 var app = angular.module('myApp', []);
 var apiKey = 'MDE5NDE1NDg2MDE0MzM0MjY2ODI1OTQ2Yw001',
-    nprUrl = 'http://api.npr.org/query?id=61&fields=relatedLink,title,byline,text,audio,image,pullQuote,all&output=JSON';
+    nprUrl = 'http://api.npr.org/query?id=1149&title=Custom&fields=relatedLink,title,byline,text,audio,image,pullQuote,all&output=JSON';
 
 app.factory('audio', function($document) {
     var audio = $document[0].createElement('audio');
