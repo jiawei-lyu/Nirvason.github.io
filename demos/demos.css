@@ -1,0 +1,142 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    color: #373737;
+    font-family: 'Cabin', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    margin: 0;
+    padding-top: 100px;
+}
+
+h3 {
+    padding: 0;
+    margin: 0;
+    line-height: 100vh;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.wrapper .fa-long-arrow-down {
+    font-size: 2em;
+    line-height: 2em;
+    animation: arrow 2s infinite;
+    -webkit-animation: arrow 2s infinite;
+}
+
+.page {
+    min-height: 100%;
+}
+
+@keyframes arrow {
+    0% {
+        transform: translate3d(0px, 10px, 0px);
+        animation-timing-function: ease-in;
+    }
+    50% {
+        transform: translate3d(0px, 20px, 0px);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: translate3d(0px, 10px, 0px);
+    }
+}
+
+@-webkit-keyframes arrow {
+    0% {
+        -webkit-transform: translate3d(0px, 10px, 0px);
+        animation-timing-function: ease-in;
+    }
+    50% {
+        -webkit-transform: translate3d(0px, 20px, 0px);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        -webkit-transform: translate3d(0px, 10px, 0px);
+    }
+}
+
+/*===================================
+  Menu icon
+=====================================*/
+
+button {
+    border: none;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 1.7em;
+    background: #6c524d;
+    border-radius: 5px;
+    -o-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+button:focus {
+    outline: none;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#navigation {
+    display: none;
+    position: fixed;
+    text-align: center;
+    font-size: 1.1em;
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    background: #6c524d;
+    z-index: 1;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    line-height: 1em;
+}
+
+li {
+    padding-left: 2%;
+    display: inline;
+}
+
+li:first-child {
+    padding-left: 0;
+}
+
+/*===================================
+   Media Queries
+=====================================*/
+
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.4em;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+    #navigation {
+        height: 45px;
+        font-size: .9em;
+    }
+}

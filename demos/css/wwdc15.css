@@ -1,0 +1,135 @@
+.circle, .squircle {
+    border-top: 0.1em solid rgba(255,255,255,0.4);
+    height: 12.5em;
+    position: absolute;
+    width: 12.5em;
+}
+
+.circle {
+    border-radius: 50%;
+    box-shadow: 0 1em 2em rgba(0,0,0,0.5);
+    left: calc(50% - 6.25em);
+    top: calc(50% - 12.5em);
+    transform-origin: 50% 12.5em;
+}
+
+.one {
+    background: rgba(16, 63, 236, 0.75);
+    transform: rotateZ(225deg);
+}
+.two {
+    background: rgba(37, 172, 162, 0.75);
+    transform: rotateZ(180deg);
+}
+.three {
+    background: rgba(233, 124, 32, 0.75);
+    transform: rotateZ(135deg);
+}
+.four {
+    background: rgba(235, 67, 35, 0.75);
+    transform: rotateZ(90deg);
+}
+.five {
+    background: rgba(190, 28, 65, 0.75);
+    transform: rotateZ(45deg);
+}
+.six {
+    background: rgba(208, 57, 159, 0.75);
+    transform: rotateZ(0);
+}
+.seven {
+    background: rgba(150, 32, 198, 0.75);
+    transform: rotateZ(-45deg);
+}
+.eight {
+    background: rgba(95, 33, 203, 0.75);
+    transform: rotateZ(-90deg);
+}
+
+.squircle {
+    border-radius: 25%;
+}
+
+.small {
+    width: 4em;
+    height: 4em;
+    left: calc(50% - 2em);
+    top: calc(50% - 15em);
+    transform-origin: 50% 15em;
+    box-shadow: 0 0.25em 0.5em rgba(0,0,0,0.2);
+}
+
+.small.squircle {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.small.squircle::after {
+    background: red;
+    border-radius: 25%;
+    box-shadow: -0.25em 0.25em 0.5em rgba(0,0,0,0.2);
+    content: "";
+    height: 100%;
+    position: absolute;
+    transform: rotateZ(-45deg);
+    width: 100%;
+}
+
+.small.squircle.two::after {
+    background: rgba(37, 172, 162, 0.75);
+}
+.small.squircle.four::after {
+    background: rgba(235, 67, 35, 0.75);
+}
+.small.squircle.six::after {
+    background: rgba(208, 57, 159, 0.75);
+}
+.small.squircle.eight::after {
+    background: rgba(95, 33, 203, 0.75);
+}
+
+.large.squircle {
+    background: rgba(30, 7, 66, 0.65);
+    border: none;
+    height: 15em;
+    left: calc(50% - 7.5em);
+    position: absolute;
+    top: calc(50% - 7.5em);
+    transform: none;
+    width: 15em;
+}
+
+.large.squircle.one {
+    transform: rotateZ(45deg);
+}
+
+span {
+    display: block;
+    height: 20em;
+    left: calc(50% - 10em);
+    position: absolute;
+    top: calc(50% - 10em);
+    width: 20em;
+}
+
+/*.large-circles {*/
+    /*animation: spin 10s linear infinite;*/
+/*}*/
+
+/*.small-shapes {*/
+    /*animation: spin 30s linear infinite;*/
+/*}*/
+
+/*.content-squircle {*/
+    /*animation: spin 20s linear infinite;*/
+/*}*/
+
+@keyframes spin {
+    0% {
+        transform: rotateZ(0);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
