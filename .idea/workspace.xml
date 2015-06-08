@@ -37,8 +37,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demos/color-grid/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30668128">
-              <caret line="14" column="90" selection-start-line="14" selection-start-column="90" selection-end-line="14" selection-end-column="90" />
+            <state vertical-scroll-proportion="0.32858709">
+              <caret line="15" column="110" selection-start-line="15" selection-start-column="110" selection-end-line="15" selection-end-column="110" />
               <folding>
                 <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -399,7 +399,13 @@
       <option name="project" value="LOCAL" />
       <updated>1433794563526</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Adjusted value of hue slider">
+      <created>1433794867896</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1433794867896</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -445,7 +451,8 @@
     <MESSAGE value="Refactor" />
     <MESSAGE value="Added about page." />
     <MESSAGE value="Added HSLa Color Explorer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added HSLa Color Explorer" />
+    <MESSAGE value="Adjusted value of hue slider" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjusted value of hue slider" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -836,8 +843,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demos/color-grid/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30668128">
-          <caret line="14" column="90" selection-start-line="14" selection-start-column="90" selection-end-line="14" selection-end-column="90" />
+        <state vertical-scroll-proportion="0.32858709">
+          <caret line="15" column="110" selection-start-line="15" selection-start-column="110" selection-end-line="15" selection-end-column="110" />
           <folding>
             <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>

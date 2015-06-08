@@ -13,13 +13,13 @@
 
       <div class="control-group">
           Hue:{{color.hue}}<input class="hue-control slider" type="range" min="0" max="360" ng-model="color.hue" ng-change="calcStyle(color.hue, color.opac)">
-          Opcacity: {{color.opac}}<input class="opacity-control slider" type="range" min="0" max="1" step="0.01" ng-model="color.opac" ng-change="calcStyle(color.hue, color.opac)">
+          Opcacity: {{color.opac}}<input class="opacity-control slider" type="range" min="0" max="1" step="0.001" ng-model="color.opac" ng-change="calcStyle(color.hue, color.opac)">
       </div>
   </header>
   <div id="table-container">
       <table id="swatch-table">
           <tr ng-repeat="row in backgroundColorStrings">
-              <td ng-repeat="col in row" style="background:{{col[2]}}"></td>
+              <td ng-repeat="col in row" style="background:{{col[2]}}">{{col[0]}} {{col[2]}}</td>
           </tr>
       </table>
   </div>
