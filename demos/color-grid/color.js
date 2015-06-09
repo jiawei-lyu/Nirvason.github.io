@@ -22,7 +22,7 @@ colorGrid.controller('colorGridController', function ($scope) {
     };
 });
 
-function huetorgb(m1, m2, h) {
+function hueToRgb(m1, m2, h) {
     if(h < 0) {
         h = h + 1;
     }
@@ -44,17 +44,32 @@ function huetorgb(m1, m2, h) {
     }
 }
 
-function hsltorgb(h, s, l) {
+function hslToRgb(h, s, l) {
     h /= 360;
     s /= 100;
     l /= 100;
     var m2 = (l <= 0.5) ? l * (s + 1) : l + s - (l * s),
         m1 = l * 2 - m2,
-        r = parseInt(huetorgb(m1, m2, h + 1/3) * 255),
-        g = parseInt(huetorgb(m1, m2, h) * 255),
-        b = parseInt(huetorgb(m1, m2, h - 1/3) * 255);
+        r = parseInt(hueToRgb(m1, m2, h + 1/3) * 255),
+        g = parseInt(hueToRgb(m1, m2, h) * 255),
+        b = parseInt(hueToRgb(m1, m2, h - 1/3) * 255);
     return [r, g, b];
 }
+
+function decimalToHex(decimal) {
+    var hex = decimal.toString(16);
+    return hex.length === 1 ? '0' + hex : hex;
+}
+
+function rgbToHex(r, g, b) {
+    return '#' + decimalToHex(r) + decimalToHex(r) + decimalToHex(r);
+}
+
+function rgbToHex2(r,g,b) {
+    return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString().slice(1);
+}
+
+// RGBa to HEX: color = color * alpha + bg * (1 - alpha);
 
 function buildGrid(hue, opac) {
     var backgroundColorStrings = [];
@@ -62,9 +77,10 @@ function buildGrid(hue, opac) {
         var tempRow = [];
         for (var j = 0; j < 10; j++) {
             var hslaString = "hsla(" + hue + ", " + ((i * 10) + 5) + "%, " + ((j * 10) + 5) + "%, " + opac + ")";
-            var rgb = hsltorgb(hue, (i * 10) + 5, (j * 10) + 5);
+            var rgb = hslToRgb(hue, (i * 10) + 5, (j * 10) + 5);
             var rgbaString = "rgba(" + rgb[0] + "," + rgb[1] + "," + rgb[2] + "," + opac + ")";
-            tempRow.push([hslaString, rgb, rgbaString]);
+            var hexString = rgbToHex(rgb[0], rgb[1], rgb[2]);
+            tempRow.push([hslaString, rgb, rgbaString, hexString]);
         };
         backgroundColorStrings.push(tempRow);
     };

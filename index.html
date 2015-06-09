@@ -8,44 +8,82 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
-  <div class="container">
-    <div id="wrapper" class="shake">
-      <div class="wrapper-item">
-        <a class="first" href="demos/html/about.html">About Me</a>
-      </div>
-      <div class="wrapper-item second">
-        <a class="second" href="#">Demos</a>
-      </div>
-      <div>
-        <a href="demos/html/palette.html">Palette</a>
-      </div>
-      <div>
-        <a href="demos/npr-player/index.html">NPR-Player</a>
-      </div>
-      <div>
-        <a href="http://jiawei.azurewebsites.net/">Let's Chat!</a>
-      </div>
-      <div>
-        <a href="demos/color-grid">HSLa Color Explorer</a>
-      </div>
-    </div>
-  </div>
-  <div class="content content-about first">This is the about content</div>
-  <div class="content content-demo second">This is the demo content</div>
-  <script src="js/main.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-route.js"></script>
+<!--<body>-->
+  <!--<div class="container">-->
+    <!--<div id="wrapper" class="shake">-->
+      <!--<div class="wrapper-item">-->
+        <!--<a class="first" href="demos/html/about.html">About Me</a>-->
+      <!--</div>-->
+      <!--<div class="wrapper-item second">-->
+        <!--<a class="second" href="#">Demos</a>-->
+      <!--</div>-->
+      <!--<div>-->
+        <!--<a href="demos/html/palette.html">Palette</a>-->
+      <!--</div>-->
+      <!--<div>-->
+        <!--<a href="demos/npr-player/index.html">NPR-Player</a>-->
+      <!--</div>-->
+      <!--<div>-->
+        <!--<a href="http://jiawei.azurewebsites.net/">Let's Chat!</a>-->
+      <!--</div>-->
+      <!--<div>-->
+        <!--<a href="demos/color-grid">HSLa Color Explorer</a>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+  <!--<div class="content content-about first">This is the about content</div>-->
+  <!--<div class="content content-demo second">This is the demo content</div>-->
+  <!--<script src="js/main.js"></script>-->
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+  <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>-->
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>-->
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-route.js"></script>-->
 
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-63714370-1', 'auto');
-    ga('send', 'pageview');
-  </script>
+  <!--<script>-->
+    <!--(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){-->
+              <!--(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),-->
+            <!--m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)-->
+    <!--})(window,document,'script','//www.google-analytics.com/analytics.js','ga');-->
+    <!--ga('create', 'UA-63714370-1', 'auto');-->
+    <!--ga('send', 'pageview');-->
+  <!--</script>-->
+<!--</body>-->
+
+<body>
+<nav>
+  <a href="#demos" id="demos" tabindex="1">Demos</a>
+  <section>
+    <div>Demos</div>
+  </section>
+  <a href="#about" id="about" tabindex="2">About</a>
+  <section class="realistic original" contenteditable>
+    <!--<h1>Hi there</h1>-->
+    <!--<p>My name is Jiawei Lv</p>-->
+
+    <!--<h2>What's with the v in your last name?</h2>-->
+    <!--<h2>Why there's no vowel in your last name?</h2>-->
+    <!--<h2>How do you pronounce your last name?</h2>-->
+    <!--<h2>Next! Mr... el vee? Love?...</h2>-->
+    <!--<p>In Chinese Pinyin, my last name is labeled as "Lü", ü is the same umlaut as in German or Turkish language. Back at the time I applied for passport,-->
+      <!--China didn't have a rule for how to spell this character, and when typing Chinese characters, people would type "lv" for it so a certain amount of-->
+      <!--people chose this form on their passports, others use "lu" instead.-->
+    <!--</p>-->
+    <!--<p>-->
+      <!--Years later, Chinese government finally decided to unify the spelling of this character and neither of the forms above were used. "Lyu" is the official-->
+      <!--spelling of my last name now. So, this very last name has 3 different versions of English/Latin spelling: "Lyu", "Lu" and "Lv", how great is that?-->
+    <!--</p>-->
+    <!--<p>-->
+      <!--According to Wikipedia, the pronunciation of ü in Chinese Pinyin is similar as in German "über" or French "lune" (To pronounce this sound, say "ee" with rounded lips).-->
+    <!--</p>-->
+  </section>
+  <a href="#resume" id="resume" tabindex="3">Resume</a>
+  <section>
+    <div>Resume</div>
+  </section>
+  <section class="DefaultTab">
+    <div>Hi there</div>
+  </section>
+</nav>
+
 </body>
 </html>
