@@ -160,12 +160,12 @@ nav > a {
   padding-top: 4px;
   border-bottom: #1C5EE3 solid 4px;
   border-bottom: hsla(220, 78%, 50%, 1) solid 4px;
-  -webkit-transition:               color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-                         background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-                      border-bottom-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  transition:               color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-                 background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-              border-bottom-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition:               color 0.2s cubic-bezier(0.4, 0, 0.2, 1) alternate,
+                         background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1) alternate,
+                      border-bottom-color 0.4s cubic-bezier(0.4, 0, 0.2, 1) alternate;
+  transition:               color 0.2s cubic-bezier(0.4, 0, 0.2, 1) alternate,
+                 background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1) alternate,
+              border-bottom-color 0.4s cubic-bezier(0.4, 0, 0.2, 1) alternate;
 }
 nav > a:hover {
   color: rgba(255, 255, 255, 0.9);
