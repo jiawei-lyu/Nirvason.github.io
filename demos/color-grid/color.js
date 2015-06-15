@@ -19,6 +19,7 @@ colorGrid.controller('colorGridController', function ($scope) {
 
     $scope.calcStyle = function (hue, opac) {
         $scope.backgroundColorStrings = buildGrid(hue, opac);
+        console.log($scope.color.hue);
     };
 });
 
