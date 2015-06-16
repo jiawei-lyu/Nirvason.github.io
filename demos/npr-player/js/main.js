@@ -62,7 +62,7 @@ app.factory('nprService', function($http) {
             method: 'JSONP',
             url: nprUrl + '&apiKey=' + apiKey + '&callback=JSON_CALLBACK'
         });
-    }
+    };
 
     return {
         programs: function(apiKey) { return doRequest(apiKey); }
