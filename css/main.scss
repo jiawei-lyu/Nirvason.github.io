@@ -227,38 +227,8 @@ nav > a:target:before {
   opacity: 1;
   -webkit-transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1), top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1), top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-
-  /*left: -12px;*/
-  /*width: 44px;*/
-  /*height: 44px;*/
-  /*border-radius: 0 8px 5px 8px;*/
-  /*margin: -22px 0 0 43px;*/
-  /*box-shadow: 0 0 5px 1.5px rgba(0,0,0,.7);*/
-  /*-ms-transform: scale(1.98,1) rotate(45deg);*/
-  /*-webkit-transform: scale(1.98,1) rotate(45deg);*/
-  /*transform: scale(1.98,1) rotate(45deg);*/
-  /*z-index: -1;*/
 }
-/*nav > a:after {*/
-/*content: '';*/
-/*display: block;*/
-/*position: absolute;*/
-/*width: 100%;*/
-/*left: 0;*/
-/*top: -4px;*/
-/*bottom: 64px;*/
-/*opacity: 0;*/
-/*border-left: 50px solid transparent;*/
-/*border-right: 50px solid transparent;*/
-/*border-top: 100px solid #0F337A;*/
-/*border-top: 100 px solid hsla(220, 78%, 27%, 1);*/
-/*-webkit-transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1), top 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);*/
-/*transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1), top 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);*/
-/*}*/
-/*nav > a:target:after {*/
-/*top: 64px;*/
-/*opacity: 1;*/
-/*}*/
+
 nav > section,
 nav > a:target ~ section.DefaultTab {
   position: absolute;
