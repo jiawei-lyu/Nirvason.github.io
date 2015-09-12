@@ -6,7 +6,7 @@ var displayAlbumCovers = function (obj) {
     //{{#each albums.items}}
     //<div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
     //{{/each}}
-    result.innerHTML = "";
+    results.innerHTML = "";
     var div, albumId;
 
     var albums = obj.albums.items;
