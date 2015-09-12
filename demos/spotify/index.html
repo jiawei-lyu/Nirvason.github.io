@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Spotify Search</title>
+    <link href="css/spotify.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+        <h1>Search for an Artist</h1>
+        <form id="search-form">
+            <label for="query">Search an artist</label>
+            <input type="text" id="query" value="" class="form-control" />
+            <input type="submit" id="search" class="btn btn-primary" value="Search" />
+        </form>
+        <div id="results"></div>
+    </div>
+    <!--<script id="results-template" type="text/x-handlebars-template">-->
+        <!--{{#each albums.items}}-->
+        <!--<div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>-->
+        <!--{{/each}}-->
+    <!--</script>-->
+    <script src="js/spotify.js"></script>
+</body>
+</html>
