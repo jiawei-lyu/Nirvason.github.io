@@ -1,13 +1,14 @@
 var playingCssClass = 'playing',
     audioObject = null,
-    results = document.getElementById("results");
+    results = document.getElementById("results"),
+    disc = document.getElementById("chick-disc");
 
 var displayAlbumCovers = function (obj) {
     //{{#each albums.items}}
     //<div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
     //{{/each}}
     results.innerHTML = "";
-    var div, albumId;
+    var div, albumId, image;
 
     var albums = obj.albums.items;
 
@@ -106,11 +107,14 @@ results.addEventListener('click', function(e) {
                 audioObject = new Audio(data.tracks.items[0].preview_url);
                 audioObject.play();
                 target.classList.add(playingCssClass);
+                disc.classList.add(playingCssClass);
                 audioObject.addEventListener('ended', function() {
                     target.classList.remove(playingCssClass);
+                    disc.classList.remove(playingCssClass);
                 });
                 audioObject.addEventListener('pause', function() {
                     target.classList.remove(playingCssClass);
+                    disc.classList.remove(playingCssClass);
                 });
             });
         }
