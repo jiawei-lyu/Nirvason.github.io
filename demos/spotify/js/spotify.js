@@ -8,11 +8,15 @@ var displayAlbumCovers = function (obj) {
     //<div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
     //{{/each}}
     results.innerHTML = "";
-    var div, albumId, image;
+    var div, albumId, image, title;
 
     var albums = obj.albums.items;
 
     for (var i = 0; i < albums.length; i++) {
+
+        title = document.createElement("label");
+        title.textContent = albums[i].name;
+
         div = document.createElement("div");
 
         div.className = "cover";
@@ -24,13 +28,17 @@ var displayAlbumCovers = function (obj) {
 
         image = albums[i].images[0] === undefined ? "" : albums[i].images[0].url;
         div.style.backgroundImage = "url(" +image + ")";
-
+        div.appendChild(title);
         results.appendChild(div);
     }
 };
 
 
 var searchAlbums = function (keyword, callback) {
+    if (keyword.length === 0) {
+        alert("Please enter something in the search box");
+        return;
+    }
     var xhr;
     var queryUrl = "https://api.spotify.com/v1/search?q=" + keyword + "&type=album";
     if (window.XMLHttpRequest) {
