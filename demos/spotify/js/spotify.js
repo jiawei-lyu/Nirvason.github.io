@@ -1,7 +1,7 @@
 var playingCssClass = 'playing',
     audioObject = null,
     results = document.getElementById("results"),
-    disc = document.getElementById("chick-disc");
+    disc = document.getElementById("disc");
 
 var displayAlbumCovers = function (obj) {
     //{{#each albums.items}}
