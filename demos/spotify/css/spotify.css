@@ -37,7 +37,7 @@ body {
     background: url("../assets/main.png") no-repeat;
 }
 
-#chick-disc.playing {
+#disc.playing {
     animation: rotate 5s linear infinite;
 }
 
