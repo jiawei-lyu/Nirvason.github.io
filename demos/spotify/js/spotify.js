@@ -1,110 +1,112 @@
-var playingCssClass = 'playing',
-    audioObject = null,
-    results = document.getElementById("results"),
-    disc = document.getElementById("disc");
+const DISC = document.getElementById('disc');
+const PLAYING_CSS_CLASS = 'playing';
 
-var displayAlbumCovers = function (obj) {
-    //{{#each albums.items}}
-    //<div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
-    //{{/each}}
-    results.innerHTML = "";
-    var div, albumId, image, title;
+let results = document.getElementById('results');
+let audioObject;
+let i;
 
-    var albums = obj.albums.items;
+let displayAlbumCovers = (obj) => {
+    let div;
+    let albumId;
+    let image;
+    let title;
+    results.innerHTML = '';
 
-    for (var i = 0; i < albums.length; i++) {
+    let albums = obj.albums.items;
 
-        title = document.createElement("label");
+    for (let i = 0; i < albums.length; i++) {
+        title = document.createElement('label');
         title.textContent = albums[i].name;
 
-        div = document.createElement("div");
+        div = document.createElement('div');
 
-        div.className = "cover";
+        div.className = 'cover';
 
-        albumId = document.createAttribute("data-album-id");
+        albumId = document.createAttribute('data-album-id');
         albumId.value = albums[i].id;
 
         div.setAttributeNode(albumId);
 
-        image = albums[i].images[0] === undefined ? "" : albums[i].images[0].url;
-        div.style.backgroundImage = "url(" +image + ")";
+        image = albums[i].images[0] === undefined ? '' : albums[i].images[0].url;
+        div.style.backgroundImage = `url( ${image} )`;
         div.appendChild(title);
         results.appendChild(div);
     }
 };
 
 
-var searchAlbums = function (keyword, callback) {
-    if (keyword.length === 0) {
-        alert("Please enter something in the search box");
+let searchAlbums = (keyword, callback) => {
+    let response;
+    let parsedResponse;
+    let xhr;
+    let queryUrl;
+
+    if (!keyword.length) {
+        alert('Please enter something in the search box');
         return;
     }
-    var xhr;
-    var queryUrl = "https://api.spotify.com/v1/search?q=" + keyword + "&type=album";
+
+    queryUrl = `https://api.spotify.com/v1/search?q= ${ keyword } &type=album`;
     if (window.XMLHttpRequest) {
         xhr = new XMLHttpRequest();
     } else if (window.ActiveXObject) {
-        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        xhr = new ActiveXObject('Microsoft.XMLHTTP');
     }
 
-    xhr.onreadystatechange = function () {
+    xhr.onreadystatechange = () => {
         if (xhr.readyState === 4) {
             // good!
             if (xhr.status === 200) {
-                var response = xhr.responseText;
-                var jsonObject = JSON.parse(response);
-                //JSON.parse(response, function (k, v) {
-                //    results.innerHTML = response;
-                //});
-                callback(jsonObject);
+                response = xhr.responseText;
+                parsedResponse = JSON.parse(response);
+                callback(parsedResponse);
             } else {
-
+                console.log('Not Ready Yet');
             }
-        } else {
-            // not yet
         }
     };
 
-    xhr.open("GET", queryUrl, true);
+    xhr.open('GET', queryUrl, true);
     xhr.send(null);
 };
 
-var fetchTracks = function (albumId, callback) {
-    var xhr;
-    var queryUrl = "https://api.spotify.com/v1/albums/" + albumId;
+let fetchTracks = (albumId, callback) => {
+    let queryUrl = `https://api.spotify.com/v1/albums/ ${ albumId }`;
+    let response;
+    let xhr;
+
     if (window.XMLHttpRequest) {
         xhr = new XMLHttpRequest();
     } else if (window.ActiveXObject) {
-        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        xhr = new ActiveXObject('Microsoft.XMLHTTP');
     }
 
-    xhr.onreadystatechange = function () {
+    xhr.onreadystatechange = () => {
         if (xhr.readyState === 4) {
             // good!
             if (xhr.status === 200) {
-                var response = xhr.responseText;
+                response = xhr.responseText;
                 callback(response);
             } else {
-
+                console.log('Not Ready Yet');
             }
-        } else {
-            // not yet
         }
     };
 
-    xhr.open("GET", queryUrl, true);
+    xhr.open('GET', queryUrl, true);
     xhr.send(null);
 };
 
-document.getElementById("search-form").addEventListener("submit", function (e) {
+document.getElementById('search-form').addEventListener('submit', (e) => {
     e.preventDefault();
-    searchAlbums(document.getElementById("query").value, displayAlbumCovers);
+    searchAlbums(document.getElementById('query').value, displayAlbumCovers);
 }, false);
 
 results.addEventListener('click', function(e) {
-    var target = e.target;
+    let target = e.target;
+
     if (target !== null && target.classList.contains('cover')) {
-        if (target.classList.contains(playingCssClass)) {
+        if (target.classList.contains(PLAYING_CSS_CLASS)) {
             audioObject.pause();
         } else {
             if (audioObject) {
@@ -114,15 +116,15 @@ results.addEventListener('click', function(e) {
                 data = JSON.parse(data);
                 audioObject = new Audio(data.tracks.items[0].preview_url);
                 audioObject.play();
-                target.classList.add(playingCssClass);
-                disc.classList.add(playingCssClass);
+                target.classList.add(PLAYING_CSS_CLASS);
+                DISC.classList.add(PLAYING_CSS_CLASS);
                 audioObject.addEventListener('ended', function() {
-                    target.classList.remove(playingCssClass);
-                    disc.classList.remove(playingCssClass);
+                    target.classList.remove(PLAYING_CSS_CLASS);
+                    DISC.classList.remove(PLAYING_CSS_CLASS);
                 });
                 audioObject.addEventListener('pause', function() {
-                    target.classList.remove(playingCssClass);
-                    disc.classList.remove(playingCssClass);
+                    target.classList.remove(PLAYING_CSS_CLASS);
+                    DISC.classList.remove(PLAYING_CSS_CLASS);
                 });
             });
         }

@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/demos/spotify/js/spotify-compiled.js" />
+        <item url="file://$PROJECT_DIR$/demos/demos-compiled.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/demos/spotify/js/spotify-compiled.js" />
+      <root url="file://$PROJECT_DIR$/demos/demos-compiled.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

@@ -46,3 +46,15 @@ $(function() {
         }
     });
 });
+
+// babel test
+var arr = [1,2,3,4,5];
+arr.forEach(v => {
+    if (v > 2) {
+        console.log(v);
+    }
+});
+function f(x, y=12) {
+    // y is 12 if not passed (or passed as undefined)
+    return x + y;
+};
